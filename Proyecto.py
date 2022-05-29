@@ -15,3 +15,12 @@ class ToExcel:
         self.ws.write(0, 0, "Datos del Arduino")
         self.columns = ["Sensor"]
         self.number = 1000
+
+    #Función encargada de argregar las columnas extras necesarias además de la principal
+    def addColumns(self, col):
+        self.columns.extend(col)
+
+    #Función encargada de recibir el número de datos que desean recibirse
+    def addData(self, number):
+        self.number = number
+
