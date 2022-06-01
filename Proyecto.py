@@ -55,3 +55,4 @@ class ToExcel:
 
     def writeFile(self, archivo):
         self.wb.save(archivo)
+
