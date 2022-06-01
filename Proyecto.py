@@ -3,9 +3,11 @@ import serial
 import xlwt
 
 # se declara la clase que permitirá
+
+
 class ToExcel:
     # se declara la función init que permite la creación del archivo Excel
-    def __int__(self, port, baudrate):
+    def __init__(self, port, baudrate):
         self.port = port
         self.baudrate = baudrate
 
@@ -24,3 +26,32 @@ class ToExcel:
     def addData(self, number):
         self.number = number
 
+    #Función encargada de leer los datos del puerto serial
+    def readFromPort(self):
+        ser = serial.Serial(self.port, self.baudrate, timeout=1)
+        c = 0
+        cont = 0
+        for col in self.columns:
+            self.ws.write(1, c, col)
+            c = c + 1
+        self.fila = 2
+
+        i = 0
+        while (i < self.number):
+            line = str(ser.readline())
+            if (len(line) > 0):
+
+                cont = cont + 1
+                if (line.find(",")):
+                    c = 1
+                    self.ws.write(self.fila, 0, cont)
+                    columnas = line.split(",")
+                    for col in columnas:
+                        self.ws.write(self.fila, c, col)
+                        c = c + 1
+
+                i = i + 1
+                self.fila = self.fila + 1
+
+    def writeFile(self, archivo):
+        self.wb.save(archivo)
