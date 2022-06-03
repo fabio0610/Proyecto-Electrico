@@ -31,4 +31,3 @@ class ToExcel:
             for number in range(self.sensor):
                 label = "Sensor_"+str(number)
                 self.data_sensor.at[index, label] = info[number].replace("b'",'').replace("\\r\\n'",'')
-
