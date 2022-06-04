@@ -23,12 +23,14 @@ class ToExcel:
             date_time = date_time.split(',')
             line = str(ser.readline())
             line = str(ser.readline())
+            line = str(ser.readline())
             line.find(",")
             info = line.split(",")
-            self.data_sensor.at[index, 'ID'] = index
+            #print(info)
+            self.data_sensor.at[index, 'ID'] = index+1
             self.data_sensor.at[index, 'Fecha'] = date_time[0]
             self.data_sensor.at[index, 'Hora'] = date_time[1]
             for number in range(self.sensor):
-                label = "Sensor_"+str(number)
+                label = "Sensor_"+str(number+1)
                 self.data_sensor.at[index, label] = info[number].replace("b'",'').replace("\\r\\n'",'')
 
