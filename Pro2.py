@@ -1,5 +1,6 @@
 import pandas as pd
 import serial
+from time import sleep
 from datetime import datetime
 
 
@@ -12,21 +13,21 @@ class ToExcel:
         self.iterations=0
         self.sensor=0
         self.index=0
+        self.delay = 2
 
 
-    now = datetime.now()
+
     def readfromport(self):
         ser = serial.Serial(self.port, self.baudrate, timeout=1)
 
         for index in range(self.iterations):
-            date_time = self.now.strftime("%m/%d/%Y, %H:%M:%S")
+            sleep(self.delay)
+            now = datetime.now()
+            date_time = now.strftime("%m/%d/%Y, %H:%M:%S")
             date_time = date_time.split(',')
-            line = str(ser.readline())
-            line = str(ser.readline())
             line = str(ser.readline())
             line.find(",")
             info = line.split(",")
-            #print(info)
             self.data_sensor.at[index, 'ID'] = index+1
             self.data_sensor.at[index, 'Fecha'] = date_time[0]
             self.data_sensor.at[index, 'Hora'] = date_time[1]
