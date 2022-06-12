@@ -13,7 +13,7 @@ class ToExcel:
         self.iterations=0
         self.sensor=0
         self.index=0
-        self.delay = 2
+        self.delay = 3
 
 
 

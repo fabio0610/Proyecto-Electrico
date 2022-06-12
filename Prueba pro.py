@@ -15,3 +15,18 @@ df.at[2,'mampichas']='Abdul'
 df.to_excel('demo2.xlsx')
 # Close the Pandas Excel writer and output the Excel file.
 #writer.save()
+
+
+def ejecucion(self):
+    self.ToExcel = ToExcel(str(self.PuertoBox.currentText()), int(self.VelocidadBox.currentText()))
+    self.ToExcel.iterations = int(self.MedicionestEdit.toPlainText())
+    self.ToExcel.sensor = int(self.SensoresEdit.toPlainText())
+    self.ToExcel.readfromport()
+    if (self.ExcelButton.isChecked()):
+        self.ToExcel.data_sensor.to_excel('Data.xlsx')
+        self.listo.setText("Archivo de Excel generado")
+    elif (self.CSVButton.isChecked()):
+        self.ToExcel.data_sensor.to_csv('Data.csv')
+        self.listo.setText("Archivo CSV generado")
+
+self.Generate.clicked.connect(self.ejecucion)
