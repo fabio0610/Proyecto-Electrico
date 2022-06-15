@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>375</width>
-    <height>169</height>
+    <height>183</height>
    </rect>
   </property>
   <property name="palette">
@@ -215,8 +215,8 @@
   <widget class="QRadioButton" name="ExcelButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>40</y>
+     <x>290</x>
+     <y>80</y>
      <width>82</width>
      <height>17</height>
     </rect>
@@ -228,8 +228,8 @@
   <widget class="QRadioButton" name="CSVButton">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>70</y>
+     <x>290</x>
+     <y>100</y>
      <width>82</width>
      <height>17</height>
     </rect>
@@ -242,7 +242,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>0</y>
+     <y>10</y>
      <width>111</width>
      <height>21</height>
     </rect>
@@ -255,7 +255,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>50</y>
+     <y>60</y>
      <width>101</width>
      <height>16</height>
     </rect>
@@ -267,8 +267,8 @@
   <widget class="QLabel" name="Puerto">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>0</y>
+     <x>160</x>
+     <y>10</y>
      <width>41</width>
      <height>20</height>
     </rect>
@@ -280,8 +280,8 @@
   <widget class="QLabel" name="Velocidad">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>50</y>
+     <x>150</x>
+     <y>60</y>
      <width>51</width>
      <height>20</height>
     </rect>
@@ -293,8 +293,8 @@
   <widget class="QComboBox" name="VelocidadBox">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>70</y>
+     <x>140</x>
+     <y>80</y>
      <width>71</width>
      <height>21</height>
     </rect>
@@ -338,8 +338,8 @@
   <widget class="QComboBox" name="PuertoBox">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>20</y>
+     <x>140</x>
+     <y>30</y>
      <width>71</width>
      <height>22</height>
     </rect>
@@ -399,7 +399,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>10</y>
+     <y>60</y>
      <width>81</width>
      <height>20</height>
     </rect>
@@ -412,7 +412,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>20</y>
+     <y>30</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -422,7 +422,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>70</y>
+     <y>80</y>
      <width>41</width>
      <height>31</height>
     </rect>
@@ -432,7 +432,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>130</y>
+     <y>150</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -444,8 +444,8 @@
   <widget class="QLabel" name="listo">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>110</y>
+     <x>120</x>
+     <y>120</y>
      <width>181</width>
      <height>16</height>
     </rect>
@@ -516,6 +516,29 @@
    </property>
    <property name="text">
     <string/>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="NombreEdit">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Nombre">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>10</y>
+     <width>91</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nombre de archivo</string>
    </property>
   </widget>
  </widget>
