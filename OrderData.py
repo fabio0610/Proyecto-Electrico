@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from Proyecto import ToExcel
+from ToExcel import ToExcel
 
 class Ui_Data(object):
     def setupUi(self, Data):
